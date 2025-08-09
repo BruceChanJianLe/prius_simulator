@@ -1,0 +1,3 @@
+[submodule "prius_gazebo/models"]
+	path = prius_gazebo/models
+	url = https://github.com/BruceChanJianLe/prius_simulator_models.git
