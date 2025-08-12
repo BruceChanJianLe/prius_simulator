@@ -1,0 +1,9 @@
+repositories:
+  prius_sensor_kit_launch:
+    type: git
+    url: https://github.com/BruceChanJianLe/prius_sensor_kit_launch.git
+    version: master
+  prius_vehicle_launch:
+    type: git
+    url: https://github.com/BruceChanJianLe/prius_vehicle_launch.git
+    version: master
