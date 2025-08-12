@@ -1,0 +1,85 @@
+# replace clock_bridge
+- topic_name: "/clock"
+  ros_type_name: "rosgraph_msgs/msg/Clock"
+  gz_type_name: "gz.msgs.Clock"
+  direction: GZ_TO_ROS
+
+# replace joint_state_bridge
+- gz_topic_name: "world/<world_name>/model/prius/joint_state"
+  ros_topic_name: "joint_states"
+  ros_type_name: "sensor_msgs/msg/JointState"
+  gz_type_name: "gz.msgs.Model"
+  direction: GZ_TO_ROS
+
+# replace odom_bridge - check gz topic name
+# gz topic published by DiffDrive plugin
+- gz_topic_name: "model/prius/odom"
+  ros_topic_name: "odom"
+  ros_type_name: "nav_msgs/msg/Odometry"
+  gz_type_name: "gz.msgs.Odometry"
+  direction: GZ_TO_ROS
+
+# replace odom_tf_bridge - check gz and ros topic names
+# gz topic published by DiffDrive plugin
+# prefix ros2 topic with gz
+# - gz_topic_name: "model/prius/tf"
+#   ros_topic_name: "tf"
+#   ros_type_name: "tf2_msgs/msg/TFMessage"
+#   gz_type_name: "gz.msgs.Pose_V"
+#   direction: GZ_TO_ROS
+
+# replace imu_bridge - check gz topic name
+- gz_topic_name: "imu/data"
+  ros_topic_name: "sensing/imu/data"
+  ros_type_name: "sensor_msgs/msg/Imu"
+  gz_type_name: "gz.msgs.IMU"
+  direction: GZ_TO_ROS
+
+# replace lidar_bridge
+- topic_name: "scan"
+  ros_type_name: "sensor_msgs/msg/LaserScan"
+  gz_type_name: "gz.msgs.LaserScan"
+  direction: GZ_TO_ROS
+
+# replace cmd_vel_bridge
+- topic_name: "cmd_vel"
+  ros_type_name: "geometry_msgs/msg/Twist"
+  gz_type_name: "gz.msgs.Twist"
+  direction: ROS_TO_GZ
+
+# replace front_camera_bridge - check gz topic name
+- topic_name: "front_camera"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: GZ_TO_ROS
+
+# replace left_camera_bridge - check gz topic name
+- topic_name: "left_camera"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: GZ_TO_ROS
+
+# replace back_camera_bridge - check gz topic name
+- topic_name: "back_camera"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: GZ_TO_ROS
+
+# replace right_camera_bridge - check gz topic name
+- topic_name: "right_camera"
+  ros_type_name: "sensor_msgs/msg/Image"
+  gz_type_name: "gz.msgs.Image"
+  direction: GZ_TO_ROS
+
+# replace top_lidar_bridge - check gz topic name
+- gz_topic_name: "top_lidar/points"
+  ros_topic_name: "perception/obstacle_segmentation/pointcloud"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  direction: GZ_TO_ROS
+
+# replace navsat_bridge - check gz topic name
+- topic_name: "gps/fix"
+  ros_type_name: "sensor_msgs/msg/NavSatFix"
+  gz_type_name: "gz.msgs.NavSat"
+  direction: GZ_TO_ROS

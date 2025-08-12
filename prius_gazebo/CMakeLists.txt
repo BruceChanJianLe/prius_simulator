@@ -7,7 +7,7 @@ find_package(prius_description REQUIRED)
 find_package(ros_gz_sim REQUIRED)
 find_package(ros_gz_bridge REQUIRED)
 
-install(DIRECTORY launch models worlds
+install(DIRECTORY configs launch models worlds
     DESTINATION share/${PROJECT_NAME}/
 )
 
