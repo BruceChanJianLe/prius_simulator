@@ -13,7 +13,7 @@
 
 # replace odom_bridge - check gz topic name
 # gz topic published by DiffDrive plugin
-- gz_topic_name: "model/prius/odom"
+- gz_topic_name: "model/prius/odometry"
   ros_topic_name: "odom"
   ros_type_name: "nav_msgs/msg/Odometry"
   gz_type_name: "gz.msgs.Odometry"
