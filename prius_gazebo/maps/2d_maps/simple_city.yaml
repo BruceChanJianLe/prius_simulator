@@ -1,0 +1,9 @@
+free_thresh: 0.196
+image: simple_city.pgm
+negate: 0
+occupied_thresh: 0.65
+origin:
+- -180.4705
+- -150.89056
+- 0.0
+resolution: 0.1
