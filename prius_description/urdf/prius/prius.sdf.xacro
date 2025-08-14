@@ -680,24 +680,24 @@
     <link name="top_lidar">
       <pose>0 0 1.7 0 0 -1.579</pose>
       <inertial>
-        <mass value="1.0"/>
-        <origin xyz="0 0 0.07212"/>
+        <mass value="1.0" />
+        <origin xyz="0 0 0.07212" />
         <inertia ixx="${(1.0 * (3.0*0.04267*0.04267 + 0.14424*0.14424)) / 12.0}" ixy="0" ixz="0"
           iyy="${(1.0 * (3.0*0.04267*0.04267 + 0.14424*0.14424)) / 12.0}" iyz="0"
-          izz="${0.5 * 1.0 * (0.04267*0.04267)}"/>
+          izz="${0.5 * 1.0 * (0.04267*0.04267)}" />
       </inertial>
 
       <visual name="visual">
         <geometry>
           <mesh>
-          <uri>file://$(find prius_description)/models/velodyne/meshes/HDL32E_base.dae</uri>
+            <uri>file://$(find prius_description)/models/velodyne/meshes/HDL32E_base.dae</uri>
           </mesh>
         </geometry>
       </visual>
       <collision name="collision">
-        <origin rpy="0 0 0" xyz="0 0 0.07212"/>
+        <origin rpy="0 0 0" xyz="0 0 0.07212" />
         <geometry>
-          <cylinder radius="0.04267" length="0.14424"/>
+          <cylinder radius="0.04267" length="0.14424" />
         </geometry>
       </collision>
 
@@ -787,6 +787,18 @@
         <frame_id>${namespace}/odom</frame_id>
         <child_frame_id>${namespace}/base_link</child_frame_id>
       </xacro:unless>
+    </plugin>
+
+    <!-- Joints plugin -->
+    <plugin filename="gz-sim-joint-state-publisher-system"
+      name="gz::sim::systems::JointStatePublisher">
+      <xacro:if value="${namespace == '/'}">
+        <topic>prius/joint_state</topic>
+      </xacro:if>
+      <xacro:unless value="${namespace == '/'}">
+        <topic>${namespace}/prius/joint_state</topic>
+      </xacro:unless>
+      <update_rate>30</update_rate>
     </plugin>
 
   </model>
