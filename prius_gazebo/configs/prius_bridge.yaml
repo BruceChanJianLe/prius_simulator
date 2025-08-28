@@ -74,7 +74,14 @@
 
 # replace top_lidar_bridge - check gz topic name
 - gz_topic_name: "top_lidar/points"
-  ros_topic_name: "perception/obstacle_segmentation/pointcloud"
+  ros_topic_name: "top_lidar/points"
+  ros_type_name: "sensor_msgs/msg/PointCloud2"
+  gz_type_name: "gz.msgs.PointCloudPacked"
+  direction: GZ_TO_ROS
+
+# replace front_lidar_bridge - check gz topic name
+- gz_topic_name: "front_lidar/points"
+  ros_topic_name: "front_lidar/points"
   ros_type_name: "sensor_msgs/msg/PointCloud2"
   gz_type_name: "gz.msgs.PointCloudPacked"
   direction: GZ_TO_ROS
