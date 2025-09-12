@@ -3,7 +3,7 @@ project(prius_viz)
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
-find_package(p3dx_description REQUIRED)
+find_package(prius_description REQUIRED)
 find_package(rviz2 REQUIRED)
 
 install(DIRECTORY launch rviz2
