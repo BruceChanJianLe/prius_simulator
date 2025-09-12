@@ -3,4 +3,4 @@
 	url = https://github.com/BruceChanJianLe/prius_simulator_models.git
 [submodule "prius_gazebo/maps/3d_maps"]
 	path = prius_gazebo/maps/3d_maps
-	url = git@github.com:BruceChanJianLe/prius_simulator_3d_maps.git
+	url = https://github.com/BruceChanJianLe/prius_simulator_3d_maps.git
