@@ -18,8 +18,10 @@ def generate_launch_description():
     world_file = LaunchConfiguration(
         "world_file", default=[join(this_package_path, "worlds/"), world_name, ".sdf"]
     )
-    x_pose = LaunchConfiguration("x_pose", default=-40.0)
-    y_pose = LaunchConfiguration("y_pose", default=-1.9)
+    # x_pose = LaunchConfiguration("x_pose", default=-40.0)
+    # y_pose = LaunchConfiguration("y_pose", default=-1.9)
+    x_pose = LaunchConfiguration("x_pose", default=0.0)
+    y_pose = LaunchConfiguration("y_pose", default=0.0)
     z_pose = LaunchConfiguration("z_pose", default=5.5)
     yaw = LaunchConfiguration("yaw", default=1.57)
 
